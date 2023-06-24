@@ -25,20 +25,20 @@ public class Name_book {
             control= scanner.nextInt();
 
             if(control == 1) {
-                addUser(names, gender, ages, key, scanner);
+                addUser(names, gender, ages, scanner);
             }
             if(control==2){
-               print(names, gender, ages, key);
+               print(names, gender, ages);
              }
             if(control==3){
-                sort(names, gender, ages, key);
+                sort(names, gender, ages);
                 control = 5;
             }
 
         }
     }
     public static void addUser(ArrayList<String> names, ArrayList<String> genders ,
-                               ArrayList<Integer>ages, ArrayList<Integer> key, Scanner sc) {
+                               ArrayList<Integer>ages, Scanner sc) {
 
         System.out.println("Введите имя");
         String name = sc.next();
@@ -49,11 +49,11 @@ public class Name_book {
         names.add(name);
         genders.add(gender);
         ages.add(age);
-        key.add(key.size()+1);
+
     }
 
     public static void print(ArrayList<String> names, ArrayList<String> genders ,
-                             ArrayList<Integer>ages, ArrayList<Integer> key) {
+                             ArrayList<Integer>ages) {
 
         System.out.println("_________________________________________________");
         for (int i = 0; i< names.size(); i++ ) {
@@ -65,7 +65,7 @@ public class Name_book {
     }
 
     public static void sort(ArrayList<String> names, ArrayList<String> genders ,
-                             ArrayList<Integer>ages, ArrayList<Integer> key) {
+                             ArrayList<Integer>ages) {
 
         ArrayList<Integer> keys = new ArrayList<>();
         ArrayList<Integer> agess = new ArrayList<>(ages);
