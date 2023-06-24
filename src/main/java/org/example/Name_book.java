@@ -35,6 +35,7 @@ public class Name_book {
                 control = 5;
             }
 
+
         }
     }
     public static void addUser(ArrayList<String> names, ArrayList<String> genders ,
